@@ -1,0 +1,12 @@
+import React from 'react';
+import type { SlideData } from '../../types';
+
+export const sensoryTitleSlide: SlideData = {
+    layout: 'custom',
+    content: (
+        <div className="w-full h-full flex flex-col items-center justify-center text-center bg-teal-600 text-white p-12">
+            <p className="text-2xl font-bold uppercase tracking-widest mb-4">Megatrend ②</p>
+            <h1 className="text-8xl font-black tracking-tighter">SENSORY EXPANSION</h1>
+        </div>
+    )
+};
