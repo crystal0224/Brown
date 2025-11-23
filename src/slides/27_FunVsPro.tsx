@@ -22,6 +22,20 @@ export const funVsProSlide: SlideData = {
                     </p>
                 </div>
             </div>
+
+            <div className="mt-24 w-full max-w-4xl bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-fade-in-up">
+                <h3 className="text-2xl font-bold text-indigo-300 mb-4 text-left">
+                    그래서 최근 하고 있는 노력은...
+                </h3>
+                <div className="text-left space-y-2">
+                    <p className="text-lg text-slate-200 leading-relaxed">
+                        할 수 있는 일의 영역이 다양해진만큼 <span className="text-white font-bold">업무 프로세스에 대한 이해도</span>가 필요하다고 생각.
+                    </p>
+                    <p className="text-lg text-slate-300">
+                        PM, UI/UX디자이너, 개발자들의 업무 지식을 기본적인 수준에서 학습
+                    </p>
+                </div>
+            </div>
         </div>
     )
 };

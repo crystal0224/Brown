@@ -1,4 +1,4 @@
-import { titleSlide } from './01_Title';
+import { titleSlide } from './Title';
 import { keywordsSlide } from './02_Keywords';
 import { keywordDescriptionSlide } from './03_KeywordDescription';
 import { switchingCostSlide } from './04_SwitchingCost';
@@ -24,6 +24,7 @@ import { vibeCodingSlide } from './22_VibeCoding';
 import { transitionSlide } from './23_Transition';
 import { principlesSlide } from './24_Principles';
 import { promptComparisonSlide } from './25_PromptComparison';
+import { geminiPromptingSlide } from './GeminiPrompting';
 import { fluencySlide } from './26_Fluency';
 import { funVsProSlide } from './27_FunVsPro';
 import { closingSlide } from './28_Closing';
@@ -57,6 +58,7 @@ export const slidesData: SlideData[] = [
     transitionSlide,
     principlesSlide,
     promptComparisonSlide,
+    geminiPromptingSlide,
     fluencySlide,
     funVsProSlide,
     closingSlide

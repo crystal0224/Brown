@@ -18,59 +18,52 @@ const ConfusionContent = () => {
         '그래서, 비용은 얼마나 드는가?',
     ];
 
-    const InfoColumn = ({ icon, title, subtitle, items, color }: { icon: string, title: string, subtitle: string, items: string[], color: any }) => (
-        <div className={`bg-white rounded-2xl shadow-xl p-8 flex flex-col border-t-8 ${color.border} h-full`}>
-            <div className="flex items-center mb-6">
-                <div className="text-6xl mr-5">{icon}</div>
-                <div>
-                    <h3 className="text-3xl font-black text-slate-800">{title}</h3>
-                    <p className="text-lg font-bold text-slate-500">{subtitle}</p>
-                </div>
-            </div>
-            <ul className="space-y-4 text-lg text-slate-700 list-inside flex-grow">
-                {items.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                        <svg className={`w-6 h-6 ${color.text} mr-3 mt-1 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                        <span>{item}</span>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-
     return (
-        <div className="w-full h-full flex items-center justify-center p-8 bg-slate-50 relative">
-            <div className="grid grid-cols-2 gap-8 w-full max-w-6xl h-full">
-                <InfoColumn
-                    icon="🌊"
-                    title="Mainstream"
-                    subtitle="(지난 10개월간의 흐름)"
-                    items={mainStreamItems}
-                    color={{ border: 'border-indigo-500', text: 'text-indigo-500' }}
-                />
-                <InfoColumn
-                    icon="🤔"
-                    title="Questions"
-                    subtitle="(우리가 혼란스러운 이유)"
-                    items={questionItems}
-                    color={{ border: 'border-teal-500', text: 'text-teal-500' }}
-                />
-            </div>
-            <div className="absolute bottom-8 right-8 max-w-md animate-fade-in-up z-10">
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-slate-200 relative overflow-hidden">
-                    {/* Decorative gradient bar */}
-                    <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-indigo-500 to-teal-500"></div>
-
-                    <div className="flex items-start gap-4">
-                        <span className="text-3xl select-none">💡</span>
+        <div className="w-full h-full flex flex-col items-center p-12 bg-slate-50">
+            <div className="flex-grow w-full max-w-6xl grid grid-cols-2 gap-12">
+                {/* Left Column: Mainstream */}
+                <div className="flex flex-col h-full">
+                    <div className="flex items-center mb-8 pb-4 border-b-2 border-indigo-100">
+                        <span className="text-4xl mr-4">🌊</span>
                         <div>
-                            <p className="text-slate-600 font-medium text-lg leading-relaxed">
-                                "여전히 <span className="text-indigo-600 font-bold">현재진행형</span>이라,<br />
-                                딱 하나의 <span className="text-teal-600 font-bold">정답</span>은 없지만..."
-                            </p>
+                            <h3 className="text-2xl font-bold text-slate-800">Mainstream</h3>
+                            <p className="text-sm font-medium text-indigo-500 mt-1">지난 11개월간의 흐름</p>
                         </div>
+                    </div>
+                    <div className="space-y-3">
+                        {mainStreamItems.map((item, index) => (
+                            <div key={index} className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center hover:shadow-md transition-shadow">
+                                <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-4 flex-shrink-0"></div>
+                                <span className="text-slate-700 font-medium">{item}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Right Column: Questions */}
+                <div className="flex flex-col h-full">
+                    <div className="flex items-center mb-8 pb-4 border-b-2 border-teal-100">
+                        <span className="text-4xl mr-4">🤔</span>
+                        <div>
+                            <h3 className="text-2xl font-bold text-slate-800">Questions</h3>
+                            <p className="text-sm font-medium text-teal-500 mt-1">우리가 혼란스러운 이유</p>
+                        </div>
+                    </div>
+                    <div className="space-y-4 flex-grow">
+                        {questionItems.map((item, index) => (
+                            <div key={index} className="bg-teal-50/50 p-5 rounded-xl border border-teal-100/50 flex items-start">
+                                <span className="text-teal-600 font-bold mr-3 text-lg">Q.</span>
+                                <span className="text-slate-700 font-semibold text-lg">{item}</span>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Message specific to Questions */}
+                    <div className="mt-6 bg-white rounded-xl shadow-md border border-teal-100 p-5 flex items-start animate-fade-in-up">
+                        <span className="text-2xl mr-3">💡</span>
+                        <p className="text-slate-600 font-medium text-base leading-relaxed">
+                            "여전히 <span className="text-indigo-600 font-bold">현재진행형</span>이라,<br />딱 하나의 <span className="text-teal-600 font-bold">정답</span>은 없지만..."
+                        </p>
                     </div>
                 </div>
             </div>
