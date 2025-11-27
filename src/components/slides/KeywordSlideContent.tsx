@@ -123,11 +123,11 @@ export const KeywordSlideContent = () => {
     ];
 
     return (
-        <div className="w-full h-full relative p-4 pt-12">
+        <div className="w-full h-full relative p-3 pt-12">
             <div className="absolute top-2 right-4 z-10">
                 <p className="text-xs font-semibold text-slate-500 bg-slate-100/80 px-3 py-1.5 rounded-full shadow-sm ring-1 ring-slate-200">💡 키워드를 클릭하면 설명을 볼 수 있습니다.</p>
             </div>
-            <div className={`grid grid-cols-2 grid-rows-2 gap-4 h-full transition-filter duration-300 ${activeKeyword ? 'blur-sm' : ''}`}>
+            <div className={`grid grid-cols-2 grid-rows-2 gap-3 h-full transition-filter duration-300 ${activeKeyword ? 'blur-sm' : ''}`}>
                 {categories.map(cat => (
                     <KeywordCategoryCard
                         key={cat.title}

@@ -19,50 +19,49 @@ const ConfusionContent = () => {
     ];
 
     return (
-        <div className="w-full h-full flex flex-col items-center p-12 bg-slate-50">
-            <div className="flex-grow w-full max-w-6xl grid grid-cols-2 gap-12">
+        <div className="w-full h-full flex flex-col items-center p-8 bg-slate-100 overflow-hidden">
+            <div className="flex-grow w-full max-w-6xl grid grid-cols-2 gap-12 h-full min-h-0">
                 {/* Left Column: Mainstream */}
-                <div className="flex flex-col h-full">
-                    <div className="flex items-center mb-8 pb-4 border-b-2 border-indigo-100">
-                        <span className="text-4xl mr-4">🌊</span>
+                <div className="flex flex-col h-full overflow-hidden">
+                    <div className="flex items-center mb-4 pb-2 border-b-4 border-indigo-500 shrink-0">
+                        <span className="text-4xl mr-3">🌊</span>
                         <div>
-                            <h3 className="text-2xl font-bold text-slate-800">Mainstream</h3>
-                            <p className="text-sm font-medium text-indigo-500 mt-1">지난 11개월간의 흐름</p>
+                            <h3 className="text-2xl font-black text-slate-900">Mainstream</h3>
+                            <p className="text-sm font-bold text-indigo-600 mt-0.5">지난 11개월간의 흐름</p>
                         </div>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-3 overflow-y-auto pr-2">
                         {mainStreamItems.map((item, index) => (
-                            <div key={index} className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center hover:shadow-md transition-shadow">
-                                <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mr-4 flex-shrink-0"></div>
-                                <span className="text-slate-700 font-medium">{item}</span>
+                            <div key={index} className="bg-white p-3.5 rounded-r-xl border-l-8 border-indigo-500 shadow-md flex items-center hover:shadow-lg transition-all hover:-translate-y-0.5">
+                                <span className="text-slate-800 font-bold text-base">{item}</span>
                             </div>
                         ))}
                     </div>
                 </div>
 
                 {/* Right Column: Questions */}
-                <div className="flex flex-col h-full">
-                    <div className="flex items-center mb-8 pb-4 border-b-2 border-teal-100">
-                        <span className="text-4xl mr-4">🤔</span>
+                <div className="flex flex-col h-full overflow-hidden">
+                    <div className="flex items-center mb-4 pb-2 border-b-4 border-teal-500 shrink-0">
+                        <span className="text-4xl mr-3">🤔</span>
                         <div>
-                            <h3 className="text-2xl font-bold text-slate-800">Questions</h3>
-                            <p className="text-sm font-medium text-teal-500 mt-1">우리가 혼란스러운 이유</p>
+                            <h3 className="text-2xl font-black text-slate-900">Questions</h3>
+                            <p className="text-sm font-bold text-teal-600 mt-0.5">우리가 혼란스러운 이유</p>
                         </div>
                     </div>
-                    <div className="space-y-4 flex-grow">
+                    <div className="space-y-3 flex-grow overflow-y-auto pr-2">
                         {questionItems.map((item, index) => (
-                            <div key={index} className="bg-teal-50/50 p-5 rounded-xl border border-teal-100/50 flex items-start">
-                                <span className="text-teal-600 font-bold mr-3 text-lg">Q.</span>
-                                <span className="text-slate-700 font-semibold text-lg">{item}</span>
+                            <div key={index} className="bg-white p-3.5 rounded-r-xl border-l-8 border-teal-500 shadow-md flex items-start hover:shadow-lg transition-all hover:-translate-y-0.5">
+                                <span className="text-teal-600 font-black mr-2 text-lg">Q.</span>
+                                <span className="text-slate-800 font-bold text-lg">{item}</span>
                             </div>
                         ))}
                     </div>
 
                     {/* Message specific to Questions */}
-                    <div className="mt-6 bg-white rounded-xl shadow-md border border-teal-100 p-5 flex items-start animate-fade-in-up">
+                    <div className="mt-4 bg-gradient-to-r from-indigo-50 to-teal-50 rounded-lg shadow-md border-2 border-indigo-300 p-4 flex items-center shrink-0">
                         <span className="text-2xl mr-3">💡</span>
-                        <p className="text-slate-600 font-medium text-base leading-relaxed">
-                            "여전히 <span className="text-indigo-600 font-bold">현재진행형</span>이라,<br />딱 하나의 <span className="text-teal-600 font-bold">정답</span>은 없지만..."
+                        <p className="text-slate-800 font-semibold text-base leading-relaxed">
+                            여전히 <span className="text-indigo-600 font-bold">현재진행형</span>이라, 딱 하나의 <span className="text-teal-600 font-bold">정답</span>은 없지만...
                         </p>
                     </div>
                 </div>

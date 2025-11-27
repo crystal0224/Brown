@@ -27,6 +27,7 @@ import { promptComparisonSlide } from './25_PromptComparison';
 import { geminiPromptingSlide } from './GeminiPrompting';
 import { fluencySlide } from './26_Fluency';
 import { funVsProSlide } from './27_FunVsPro';
+import { aiResponsibilitySlide } from './AIResponsibility';
 import { closingSlide } from './28_Closing';
 
 import type { SlideData } from '../../types';
@@ -61,5 +62,6 @@ export const slidesData: SlideData[] = [
     geminiPromptingSlide,
     fluencySlide,
     funVsProSlide,
+    aiResponsibilitySlide,
     closingSlide
 ];
